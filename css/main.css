@@ -85,6 +85,32 @@ body {
     padding: 0;
 }
 
+/*====================================================
+                       WORK
+======================================================*/
+
+.row.no-gutters [class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.img-wrapper img:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    cursor: zoom-in;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -103,7 +129,21 @@ a:hover, a:active {
     outline: 0;
 }
 
+/*flexboxs*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.item-folio{
+    width: 350px !important;
+    height: 180px !important;   
+}
+.work img{
+    width: 350px;
+    height: 180px;
+}
 
 /* ===================================================================
  * # typography & general theme styles
@@ -2508,6 +2548,9 @@ html.no-csstransitions .home-content__main {
     margin-top: -23.4rem;
 }
 
+.slick-track{
+    margin: 0 auto 0 auto;
+}
 
 /* ------------------------------------------------------------------- 
  * ## bricks/masonry
@@ -3601,3 +3644,42 @@ footer .row {
 
 
 /*# sourceMappingURL=main.css.map */
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+ .display-2-mobil {
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 2.2rem !important;
+    line-height: 1.255;
+    color: #000000;
+    margin-top: 0;
+}
+  
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+#works .no-gutters {
+    margin-left: 25% !important;
+}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+#works .no-gutters {
+    margin-left: 25% !important;
+}
+}
