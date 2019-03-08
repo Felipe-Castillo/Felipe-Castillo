@@ -4,6 +4,9 @@
 $(function () {
 
     // animate on scroll
-    new WOW().init();
+    new WOW({
+        mobile:       false,       // default
+
+    }).init();
 });
 
