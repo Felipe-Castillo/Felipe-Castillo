@@ -5,7 +5,7 @@ $(function () {
 
     // animate on scroll
     new WOW({
-        mobile:       false,       // default
+        mobile:       true,       // default
 
     }).init();
 });
